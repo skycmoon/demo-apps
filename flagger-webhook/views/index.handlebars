@@ -1,0 +1,29 @@
+<h1>Manual Deployment Gate</h1>
+<h3>Hostname: {{hostname}}</h3>
+<form action="/release-approvals/clear" method="post">
+  <input type="submit" value="Clear all approvals">
+</form>
+<form action="/release-approvals" method="post">
+  <div>
+    <label for="chart-name">Chart Name: </label>
+    <input type="text" name="chartName" id="chart-name" required>
+  </div>
+  <div>
+    <label for="version">Version: </label>
+    <input type="text" name="version" id="version" required>
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+<br/>
+<h2>Released Apps</h2>
+<form action="/released-apps/clear" method="post">
+  <input type="submit" value="Clear all released app records">
+</form>
+<br/>
+<ul class="released-apps">
+  {{#each releasedApps}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
