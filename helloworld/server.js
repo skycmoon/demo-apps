@@ -38,6 +38,7 @@ app.get('/app', (req, res) => {
   })
 });
 
+// html page example
 // app.get('/app', (req, res) => {
 //   res.render('index', {
 //     hostname: HOSTNAME,
